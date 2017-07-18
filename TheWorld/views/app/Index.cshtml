@@ -1,0 +1,40 @@
+﻿@model IEnumerable<TheWorld.models.Trip> 
+@{ 
+    ViewBag.Title = "Home page";
+    Layout = "_Layout";
+}
+<div class="row" >
+    <div class="col-md-10 col-md-offset-2 col-xs-10 col-xs-offset-2" >
+        <h1 class="text">Welcome to the word</h1>
+        <p class="text">This app will alow you to plan for world trip</p>
+        <a asp-controller="app" asp-action="trips" class="btn btn-lg btn-success">View my trips</a>
+    </div>
+    @*<div class="col-md-6 col-xs-8" >
+        <div id="needMargin">
+            <h2>The world</h2>
+            <p>This will be a fun website soon!</p>
+            <form  class="form-group">
+                <div>
+                    <label>Date:</label>
+                    <input class="form-control" />
+                </div>
+                <div>
+                    <label>Location:</label>
+                    <input class="form-control" />
+                </div>
+                <div id="marginTop">
+                    <input class="btn btn-success btn-group-justified" type="submit" value="Add" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-6 col-xs-4 ">
+        <h2 id="needMargin">The map</h2>
+        <ul>
+            @foreach (TheWorld.models.Trip item in Model)
+            {
+                <li>@item.name:@item.dataCreated.ToString("d")</li>
+            }
+        </ul>
+    </div>*@
+</div>

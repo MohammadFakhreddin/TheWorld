@@ -1,0 +1,72 @@
+﻿@{ 
+    ViewBag.Title = "Trips";
+}
+@section scripts{
+    <script src="~/lib/angular/angular.min.js"></script>
+    <script src="~/lib/angular-route/angular-route.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwVk6GV1snHEB0HkHpI36owxuRI9K5Vbk"></script>
+    <script src="~/lib/gmaps/gmaps.min.js"></script>
+    <script src="~/lib/travelMap/travelmap.min.js"></script>
+    
+    <script src="~/js/simpleControlles.js"></script>
+    <script src="~/js/app-trips.js"></script>
+    <script src="~/js/tripsController.js"></script>
+    <script src="~/js/tripEditorController.js"></script>
+
+    <script src="~/js/simpleControlles.js"></script>
+    <script src="~/js/app-trips.js"></script>
+    <script src="~/js/tripsController.js"></script>
+    <script src="~/js/tripEditorController.js"></script>
+}
+<div class="row" ng-app="app-trips">
+    @*<div class="col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3" ng-controller="tripsController as vm">
+        <div class="text-danger" ng-show="vm.errorMessage">{{vm.errorMessage}}</div>
+        <wait-cursor display-when="vm.isBusy" ></wait-cursor>
+        <table class="table table-responsive table-striped" >
+            <tr ng-repeat="trip in vm.trips">
+                <td>{{trip.name}}</td>
+                <td>{{trip.created | date:'MM-dd-yyyy'}}</td>
+                <td><a href="#" class="btn btn-sm btn-primary" >Manage</a></td>
+            </tr>
+        </table>
+        <form novalidate name="newTripForm" ng-submit="vm.addTrip()">
+            <div class="form-group">
+                <label>Trip name</label>
+                <input class="form-control" type="text" id="name" name="name" ng-model="vm.newTrip.name" required ng-minlength="5" />
+                <span ng-show="newTripForm.$error.minlength" class="text-warning">Must be atleast five character</span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="add" class="btn btn-success btn-sm" ng-disabled="newTripForm.$invalid"/>
+            </div>
+        </form>
+    </div>*@
+    <div ng-view></div>
+    @*<div class="col-md-6 col-xs-8">
+        <div id="needMargin">
+            <h2>The world</h2>
+            <p>This will be a fun website soon!</p>
+            <form class="form-group">
+                <div>
+                    <label>Date:</label>
+                    <input class="form-control" />
+                </div>
+                <div>
+                    <label>Location:</label>
+                    <input class="form-control" />
+                </div>
+                <div id="marginTop">
+                    <input class="btn btn-success btn-group-justified" type="submit" value="Add" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-6 col-xs-4 ">
+        <h2 id="needMargin">The map</h2>
+        <ul>
+            @foreach (TheWorld.models.Trip item in Model)
+            {
+                <li>@item.name:@item.dataCreated.ToString("d")</li>
+            }
+        </ul>
+    </div>*@
+</div>

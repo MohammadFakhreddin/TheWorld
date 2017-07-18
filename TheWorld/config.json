@@ -1,0 +1,11 @@
+﻿{
+  "MailSettings": {
+    "ToAddress": "mohammad.fakhreddin@gmail.com"
+  },
+  "ConnectionStrings": {
+    "WorldContextConnection": "Server=(localdb)\\MSSQLLocalDb;Database=TheWorldDb;Trusted_Connection=true;MultipleActiveResultSets=true"
+  },
+  "Keys": {
+    "BindKey": " AmEu-jtZfWOPkLC6NaWYnFb4BiTiL9AKHWfYfub9b5ylQXObYDK8yNhmkuS3ed-I"
+  }
+}
